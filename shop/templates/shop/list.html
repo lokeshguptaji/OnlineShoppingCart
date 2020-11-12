@@ -1,0 +1,35 @@
+{% extends 'shop/basic.html' %}
+
+{% block title%}ContactUs{% endblock %}
+{% block body %}
+<div class="container">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Description</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    {% for item in listji %}
+    <tbody>
+      <tr>
+        <td>{{item.msg_id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.mobile}}</td>
+        <td>{{item.description}}</td>
+        <td>
+            <a href="#" class="btn btn-secondary btn-lg active mx-2" role="button" aria-pressed="true">Edit</a>
+            <a href="#" class="btn btn-secondary btn-lg active mx-2" role="button" aria-pressed="true">Delete</a> 
+        </td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+</div>
+  
+{% endblock %}
